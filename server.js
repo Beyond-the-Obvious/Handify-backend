@@ -29,16 +29,16 @@ app.put('/item/:id', updateItem);
 
 
 // // requiring the UserSchema module
-// const { handleUserSchema } = require('./modules/UserSchema');
-// const { createNewUser } = require('./modules/UserSchema');
-// const { deleteUser } = require('./modules/UserSchema');
-// const { updateUser } = require('./modules/UserSchema');
+const { handleUserSchema } = require('./modules/UserSchema');
+const { createNewUser } = require('./modules/UserSchema');
+const { deleteUser } = require('./modules/UserSchema');
+const { updateUser } = require('./modules/UserSchema');
 
 // // CRUD routes
-// app.get('/user', handleUserSchema);
-// app.post('/user', createNewUser);
-// app.delete('/user/:id', deleteUser);
-// app.put('/user/:id', updateUser);
+app.get('/user', handleUserSchema);
+app.post('/user', createNewUser);
+app.delete('/user/:id', deleteUser);
+app.put('/user/:id', updateUser);
 
 
 app.get('/', (req, res) => {
