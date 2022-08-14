@@ -45,22 +45,22 @@ mongoose.connect(`${process.env.DATABASE_URL}`);
 // 2. creating a testing schema
 const itemSchema = new mongoose.Schema(
   {
-    name: {
+    title: {
       type: String,
-      required: true,
+      // required: true,
     },
     description: {
       type: String,
-      required: true,
+      // required: true,
     },
     price: {
       type: Number,
-      required: true,
+      // required: true,
       default: 0,
     },
     imgURL: {
       type: String,
-      required: true,
+      // required: true,
     },
   },
   {
