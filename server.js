@@ -46,9 +46,6 @@ app.get('/', (req, res) => {
 })
 
 
-
-
-
 // added for login register 
 mongoose.connect(`${process.env.DATABASE_URL}`, {
     useNewUrlParser: true,
