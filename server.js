@@ -105,4 +105,15 @@ app.post("/register", (req, res)=> {
 })
 
 
+
+app.get('/login', getAdminData);
+
+function getAdminData(req, res) {
+    User.find({}, (error, data) => {
+      if (error) console.log(`error reading from the database: ${error}`);
+      else res.send(data);
+    });
+  }
+
+
 app.listen(PORT, () => console.log(`Server is starting on ${PORT}`))
