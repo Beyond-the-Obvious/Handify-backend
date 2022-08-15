@@ -50,7 +50,7 @@ app.get('/', (req, res) => {
 
 
 // added for login register 
-mongoose.connect("mongodb://localhost:4000/myLoginRegisterDB", {
+mongoose.connect(`${process.env.DATABASE_URL}`, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }, () => {
