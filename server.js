@@ -41,6 +41,20 @@ app.delete('/user/:id', deleteUser);
 app.put('/user/:id', updateUser);
 
 
+// for cart
+const { handleCartSchema } = require('./modules/CartSchema');
+const { createNewCart } = require('./modules/CartSchema');
+const { deleteCart } = require('./modules/CartSchema');
+const { updateCart } = require('./modules/CartSchema');
+
+// CRUD routes for cart
+app.get('/cart', handleCartSchema);
+app.post('/cart', createNewCart);
+app.delete('/cart/:id', deleteCart);
+app.put('/cart/:id', updateCart);
+
+
+
 app.get('/', (req, res) => {
     res.send('Testing Server Request Recieve')
 })
