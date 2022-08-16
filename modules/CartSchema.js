@@ -11,7 +11,7 @@ function createNewCart(req, res) {
   const { newCart } = req.body;
   const cart = new CartModel(newCart);
   cart.save();
-  res.status(201).send(Cart);
+  res.status(201).send(cart);
 }
 
 function deleteCart(req, res) {
